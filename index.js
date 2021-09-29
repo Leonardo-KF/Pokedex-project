@@ -7,7 +7,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.get('/', (req, res) => {
     const lista = ["teste1", "teste2", "teste3", "teste4", "teste5"];
-    res.render('index', {titulo:"Pagina principal"});
+    res.render('index', {titulo:"Pagina principal", conteudos: lista});
 })
 app.get('/cadastro', (req, res) => {
     res.render('cadastro');
