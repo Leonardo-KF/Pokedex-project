@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const lista = [{},{},{}];
 
+
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
@@ -23,9 +24,9 @@ app.get('/formulario', (req, res) => {
 })
 app.post('/formulario', (req, res) => {
     const {nome, email, password} = req.body;
-    const site = {nome: nome, email: email, password: password}
+    const site = {nome: nome, email: email, password: password} // pega os pokemons via json do html usar push para colocar na lista
     res.render('index')
-    res.send({nome: nome, email: email, password: password});
+    res.send({nome: nome, email: email, password: password}); // passar os pokemons para pagina da pokedex
 })
 
 app.listen(3000);
