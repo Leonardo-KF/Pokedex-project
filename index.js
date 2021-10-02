@@ -1,67 +1,72 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const path = require('path');
-const Pokemons = [{
-    id: 0,
+const path = require("path");
+const Pokemons = [
+  {
     numero: 004,
     nome: "Charmander",
     tipo: "Fogo",
-    descricao: "Tem preferência por coisas quentes. Quando chove, diz-se que o vapor jorra da ponta da cauda.",
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+    descricao:
+      "Tem preferência por coisas quentes. Quando chove, diz-se que o vapor jorra da ponta da cauda.",
     altura: 0.6,
     peso: 8.5,
     categoria: "Lagarto",
-    habilidade: "Chama"
-},
-{
-    id: 0,
-    numero: 004,
-    nome: "Charmander",
-    tipo: "Fogo",
-    descricao: "Tem preferência por coisas quentes. Quando chove, diz-se que o vapor jorra da ponta da cauda.",
-    altura: 0.6,
-    peso: 8.5,
-    categoria: "Lagarto",
-    habilidade: "Chama"
-},
-{
-    id: 0,
-    numero: 004,
-    nome: "Charmander",
-    tipo: "Fogo",
-    descricao: "Tem preferência por coisas quentes. Quando chove, diz-se que o vapor jorra da ponta da cauda.",
-    altura: 0.6,
-    peso: 8.5,
-    categoria: "Lagarto",
-    habilidade: "Chama"
-}];
-
+    habilidade: "Chama",
+  },
+  {
+    numero: 001,
+    nome: "Bulbasaur",
+    tipo: "Grass",
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+    descricao:
+      "Há uma semente de planta em suas costas desde o dia em que o Pokémon nasceu. A semente cresce lentamente.",
+    altura: 0.7,
+    peso: 6.9,
+    categoria: "Semente",
+    habilidade: "Crescimento Exagerado",
+  },
+  {
+    numero: 007,
+    nome: "Squirtle",
+    tipo: "Agua",
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+    descricao:
+      "Quando ele retrai seu longo pescoço em sua concha, ele esguicha água com força vigorosa.",
+    altura: 0.5,
+    peso: 9.0,
+    categoria: "Pequena Tartaruga",
+    habilidade: "Torrente",
+  },
+];
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 
-app.get('/', (req, res) => {
-    res.render('index', {titulo:"Pagina principal", conteudos: lista});
-})
+app.get("/", (req, res) => {
+  const pokemons = Pokemons;
+  res.render("index", { pokedex: pokemons });
+});
 
-app.get('/cadastro', (req, res) => {
-    res.render('cadastro');
-})
+app.get("/cadastro", (req, res) => {
+  res.render("cadastro");
+});
 
-app.get('/detalhes', (req, res) => {
-    res.render('detalhes');
-})
+app.get("/detalhes", (req, res) => {
+  res.render("detalhes");
+});
 
-app.get('/formulario', (req, res) => {
-    const {nome, email, password} = req.body;
-    res.send({nome: nome, email: email, password: password});
-})
+app.get("/formulario", (req, res) => {
+  const { nome, email, password } = req.body;
+  res.send({ nome: nome, email: email, password: password });
+});
 
-app.post('/formulario', (req, res) => {
-    const {nome, email, password} = req.body;
-    const site = {nome: nome, email: email, password: password} // pega os pokemons via json do html usar push para colocar na lista
-    res.render('index')
-    res.send({nome: nome, email: email, password: password}); // passar os pokemons para pagina da pokedex
-})
+app.post("/formulario", (req, res) => {
+  const { nome, email, password } = req.body;
+  const site = { nome: nome, email: email, password: password }; // pega os pokemons via json do html usar push para colocar na lista
+  res.render("index");
+  res.send({ nome: nome, email: email, password: password }); // passar os pokemons para pagina da pokedex
+});
 
 app.listen(3000);

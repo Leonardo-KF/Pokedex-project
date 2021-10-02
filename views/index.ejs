@@ -8,8 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1><%= titulo %></h1>
-    <ul id="conteudos">
+    <h1>Pokedex</h1>
+    <ul id="conteudo">
+        <% pokedex.forEach(item => { %>
+            <li><%= item.nome %></li>
+        <% }) %> 
         
     </ul>
 </body>
