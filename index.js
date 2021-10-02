@@ -8,7 +8,7 @@ const Pokemons = [
     Tipo: "Fogo",
     Imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
     Descricao:
-      "Tem preferência por coisas quentes. Quando chove, diz-se que o vapor jorra da ponta da cauda.",
+      "Tem preferência por coisas quentes. Quando chove, diz-se que vapor jorra da ponta da sua cauda.",
     Altura: 0.6,
     Peso: 8.5,
     Categoria: "Lagarto",
@@ -32,7 +32,7 @@ const Pokemons = [
     Tipo: "Agua",
     Imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
     Descricao:
-      "Quando ele retrai seu longo pescoço em sua concha, ele esguicha água com força vigorosa.",
+      "Quando ele retrai seu longo pescoço em sua concha, ele esguicha água com uma força vigorosa.",
     Altura: 0.5,
     Peso: 9.0,
     Categoria: "Pequena Tartaruga",

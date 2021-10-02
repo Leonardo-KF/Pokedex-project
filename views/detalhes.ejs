@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= pokemon.nome %></title>
+    <title><%= pokemon.Nome %></title>
 </head>
 <body>
-    <div>
-        <% for (let atrib in pokemon) { %>
-            <% if (atrib == Imagem) { %>
-                <img src="<% pokemon.atrib %>" alt="imagem do Pokemon">
-            }
-            <li><%= atrib: pokemon.atrib %></li>
-        <% } %>
+    <a href="/">
+        <h1>Pokedex</h1>
+    </a>
+    <div class="container">
+        <ul>
+            <img src="<%= pokemon.Imagem %>" alt="imagem do pokemon">
+            <li>Nome: <%= pokemon.Nome %></li>
+            <li>Tipo: <%= pokemon.Tipo %></li>
+            <li>Descricao: <%= pokemon.Descricao %></li>
+            <li>Altura: <%= pokemon.Altura %> m</li>
+            <li>Peso: <%= pokemon.Peso %> Kg</li>
+            <li>Categoria: <%= pokemon.Categoria %></li>
+            <li>Habilidade: <%= pokemon.Habilidade %></li>
+        </ul>
     </div>
     
 </body>
