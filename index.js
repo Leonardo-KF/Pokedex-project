@@ -53,8 +53,11 @@ app.get("/cadastro", (req, res) => {
   res.render("cadastro");
 });
 
-app.get("/detalhes/", (req, res) => {
-  res.render("detalhes");
+app.get("/detalhes/:ind", (req, res) => {
+  const indice = req.params.ind;
+  const pokemons = Pokemons[indice];
+  res.render("detalhes", { pokemon: pokemons });
+  console.log(pokemons);
 });
 
 app.get("/formulario", (req, res) => {
