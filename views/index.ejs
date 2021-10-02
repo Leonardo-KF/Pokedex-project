@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    <a href="/">
-        <h1>Pokedex</h1>
-    </a>
+    <header>
+        <a href="/">
+            <h1>Pokedex</h1>
+        </a>
+        <a href="/cadastro"><h2>Cadastrar</h2></a>
+    </header>
+    <% if(mensagem != "") {  %>
+        <section id="mensagem">
+            <p><%= mensagem %></p> <span id="close">&times;</span>
+        </section>
+    <% }  %>
     <div class="container"></div>
         <ul id="conteudo">
             <% pokedex.forEach(item => { %>
@@ -25,5 +32,6 @@
             
         </ul>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

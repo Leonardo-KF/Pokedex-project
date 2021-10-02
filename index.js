@@ -37,13 +37,18 @@ let Pokemons = [
   },
 ];
 
+let mensagem = "";
+
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 
 app.get("/", (req, res) => {
   const pokemons = Pokemons;
-  res.render("index", { pokedex: pokemons });
+  setTimeout(() => {
+    mensagem = "";
+  }, 1000);
+  res.render("index", { pokedex: pokemons, mensagem });
 });
 
 app.get("/cadastro", (req, res) => {
@@ -69,7 +74,7 @@ app.post("/formulario", (req, res) => {
     Categoria,
     Habilidade,
   }); // pega os pokemons via json do html usar push para colocar na lista
-  console.log(Pokemons);
+  mensagem = "Pokemon cadastrado com sucesso!!";
   res.redirect("/");
 });
 
