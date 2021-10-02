@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const Pokemons = [
+let Pokemons = [
   {
     Nome: "Charmander",
     Tipo: "Fogo",
@@ -57,9 +57,20 @@ app.get("/detalhes/:ind", (req, res) => {
 });
 
 app.post("/formulario", (req, res) => {
-  const { nome, email, password } = req.body;
-  const site = { nome: nome, email: email, password: password }; // pega os pokemons via json do html usar push para colocar na lista
-  res.render("index");
+  const { Nome, Tipo, Imagem, Descricao, Altura, Peso, Categoria, Habilidade } =
+    req.body;
+  Pokemons.push({
+    Nome,
+    Tipo,
+    Imagem,
+    Descricao,
+    Altura,
+    Peso,
+    Categoria,
+    Habilidade,
+  }); // pega os pokemons via json do html usar push para colocar na lista
+  console.log(Pokemons);
+  res.redirect("/");
 });
 
 app.listen(3000);
