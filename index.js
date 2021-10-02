@@ -3,7 +3,6 @@ const app = express();
 const path = require("path");
 const Pokemons = [
   {
-    Numero: 004,
     Nome: "Charmander",
     Tipo: "Fogo",
     Imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
@@ -15,7 +14,6 @@ const Pokemons = [
     Habilidade: "Chama",
   },
   {
-    Numero: 001,
     Nome: "Bulbasaur",
     Tipo: "Grama",
     Imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
@@ -27,7 +25,6 @@ const Pokemons = [
     Habilidade: "Crescimento Exagerado",
   },
   {
-    Numero: 007,
     Nome: "Squirtle",
     Tipo: "Agua",
     Imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
@@ -57,11 +54,6 @@ app.get("/detalhes/:ind", (req, res) => {
   const indice = req.params.ind;
   const pokemons = Pokemons[indice];
   res.render("detalhes", { pokemon: pokemons });
-});
-
-app.get("/formulario", (req, res) => {
-  const { nome, email, password } = req.body;
-  res.send({ nome: nome, email: email, password: password });
 });
 
 app.post("/formulario", (req, res) => {
