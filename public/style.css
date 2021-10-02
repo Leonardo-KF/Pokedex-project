@@ -1,5 +1,32 @@
 header {
   margin-top: 0px;
-  background-color: slategray;
-  border-radius: 10px;
+  background-color: rgb(143, 143, 143);
+  border-radius: 0px 0px 10px 10px;
+}
+
+body {
+  margin: 0px;
+}
+.hbox {
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+.cbox1 {
+  flex-grow: 1;
+  order: 0;
+  width: 10%;
+}
+.Titulo {
+  flex-grow: 2;
+  order: 1;
+  width: 20%;
+}
+.cadastro {
+  flex-grow: 2;
+  order: 2;
+  width: 20%;
+  background-color: aquamarine;
 }

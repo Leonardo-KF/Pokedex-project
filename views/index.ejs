@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <title>Pokedex</title>
 </head>
 <body>
     <header>
-        <a href="/">
-            <h1>Pokedex</h1>
-        </a>
-        <a href="/cadastro"><h2>Cadastrar</h2></a>
+        <section id="hbox">
+            <section id="cbox1">
+                <img src="/img/pokebola.png" height="50" width="50" alt="pokebola" >
+            </section>
+            <section id="Titulo">
+                <a href="/">
+                    <h1>Pokedex</h1>
+                </a>
+            </section>
+            <section id="cadastro">
+                <a href="/cadastro"><h2>Cadastrar</h2></a>
+            </section>
+        </section>
     </header>
     <% if(mensagem != "") {  %>
         <section id="mensagem">
