@@ -17,7 +17,7 @@ const Pokemons = [
   {
     numero: 001,
     nome: "Bulbasaur",
-    tipo: "Grass",
+    tipo: "Grama",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
     descricao:
       "Há uma semente de planta em suas costas desde o dia em que o Pokémon nasceu. A semente cresce lentamente.",
@@ -53,7 +53,7 @@ app.get("/cadastro", (req, res) => {
   res.render("cadastro");
 });
 
-app.get("/detalhes", (req, res) => {
+app.get("/detalhes/", (req, res) => {
   res.render("detalhes");
 });
 
@@ -66,7 +66,6 @@ app.post("/formulario", (req, res) => {
   const { nome, email, password } = req.body;
   const site = { nome: nome, email: email, password: password }; // pega os pokemons via json do html usar push para colocar na lista
   res.render("index");
-  res.send({ nome: nome, email: email, password: password }); // passar os pokemons para pagina da pokedex
 });
 
 app.listen(3000);

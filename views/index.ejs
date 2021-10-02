@@ -11,7 +11,13 @@
     <h1>Pokedex</h1>
     <ul id="conteudo">
         <% pokedex.forEach(item => { %>
-            <li><%= item.nome %></li>
+            <section class="child">
+                <a href="/detalhes/<%= pokedex.indexOf(item) %>">
+                <img src="<%= item.imagem %>" alt="imagem do Pokemon">
+                <li><%= item.nome %></li>
+                <li><%= item.tipo %></li>
+                </a>
+            </section>
         <% }) %> 
         
     </ul>
