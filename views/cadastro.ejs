@@ -4,49 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylecad.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <title>Cadastro</title>
 </head>
 <body>
-    <h1>Cadastro de Pokemons</h1>
+    <header>
+        <section class="hbox">
+            <section class="cbox1">
+                <img src="/img/pokebola.png" height="65" width="65" alt="pokebola" >
+            </section>
+            <section class="Titulo">
+                <a href="/">
+                    <h1>Pokedex</h1>
+                </a>
+            </section>
+        </section>
+    </header>
     <form method="POST" action="/formulario">
-        <div>
-            <label for="Imagem">Imagem do Pokemon: </label>
-            <input type="url" name="Imagem" id="url"
-            placeholder="https://assets.pokemon.com/assets..."
-            pattern="https://assets.pokemon.com/assets/cms2/img/pokedex/full/.*" size="150"
-            required>
-        </div>
-        <div>
-            <label for="Nome">Nome: </label>
-            <input type="text" name="Nome" placeholder="Digite o nome">
-        </div>
-        <div>
-            <label for="Tipo">Tipo: </label>
-            <input type="text" name="Tipo" placeholder="Digite o tipo">
-        </div>
-        <div>
-            <label for="Descricao">Descricao: </label>
-            <input type="text" name="Descricao" placeholder="Digite a descricao">
-        </div>
-        <div>
-            <label for="Altura">Altura: </label>
-            <input type="number" name="Altura" placeholder="Digite a altura em metros">
-        </div>
-        <div>
-            <label for="Peso">Peso: </label>
-            <input type="number" name="Peso" placeholder="Digite o peso em Kg">
-        </div>
-        <div>
-            <label for="Categoria">Categoria: </label>
-            <input type="text" name="Categoria" placeholder="Digite a Categoria">
-        </div>
-        <div>
-            <label for="Habilidade">Habilidade: </label>
-            <input type="text" name="Habilidade" placeholder="Digite a Habilidade">
-        </div>
-        <button type="submit">Salvar</button>
+        <section class="formulario">
+            <div>
+                <label for="Imagem">Imagem do Pokemon: </label>
+                <input type="url" name="Imagem" id="url"
+                placeholder="https://assets.pokemon.com/assets..."
+                pattern="https://assets.pokemon.com/assets/cms2/img/pokedex/full/.*" size="80"
+                required>
+            </div>
+            <div>
+                <label for="Nome">Nome: </label>
+                <input type="text" name="Nome" placeholder="Digite o nome">
+            </div>
+            <div>
+                <label for="Tipo">Tipo: </label>
+                <input type="text" name="Tipo" placeholder="Digite o tipo">
+            </div>
+            <div>
+                <label for="Descricao">Descricao: </label>
+                <input type="text" name="Descricao" placeholder="Digite a descricao">
+            </div>
+            <div>
+                <label for="Altura">Altura: </label>
+                <input type="number" name="Altura" placeholder="Digite a altura em metros">
+            </div>
+            <div>
+                <label for="Peso">Peso: </label>
+                <input type="number" name="Peso" placeholder="Digite o peso em Kg">
+            </div>
+            <div>
+                <label for="Categoria">Categoria: </label>
+                <input type="text" name="Categoria" placeholder="Digite a Categoria">
+            </div>
+            <div>
+                <label for="Habilidade">Habilidade: </label>
+                <input type="text" name="Habilidade" placeholder="Digite a Habilidade">
+            </div>
+            <button type="submit">Salvar</button>
+    </section>
 </body>
 </html>
