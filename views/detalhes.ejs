@@ -4,23 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styled.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <title><%= pokemon.Nome %></title>
 </head>
 <body>
-    <a href="/">
-        <h1>Pokedex</h1>
-    </a>
+    <header>
+        <section class="hbox">
+            <section class="cbox1">
+                <img src="/img/pokebola.png" height="65" width="65" alt="pokebola" >
+            </section>
+            <section class="Titulo">
+                <a href="/">
+                    <h1>Pokedex</h1>
+                </a>
+            </section>
+        </section>
+    </header>
     <div class="container">
-        <ul>
             <img src="<%= pokemon.Imagem %>" alt="imagem do pokemon">
-            <li>Nome: <%= pokemon.Nome %></li>
-            <li>Tipo: <%= pokemon.Tipo %></li>
-            <li>Descricao: <%= pokemon.Descricao %></li>
-            <li>Altura: <%= pokemon.Altura %> m</li>
-            <li>Peso: <%= pokemon.Peso %> Kg</li>
-            <li>Categoria: <%= pokemon.Categoria %></li>
-            <li>Habilidade: <%= pokemon.Habilidade %></li>
-        </ul>
+            <h2>Nome: <%= pokemon.Nome %></h2>
+            <h2>Tipo: <%= pokemon.Tipo %></h2>
+            <h2>Descricao: <%= pokemon.Descricao %></h2>
+            <h2>Altura: <%= pokemon.Altura %> m</h2>
+            <h2>Peso: <%= pokemon.Peso %> Kg</h2>
+            <h2>Categoria: <%= pokemon.Categoria %></h2>
+            <h2>Habilidade: <%= pokemon.Habilidade %></h2>
     </div>
     
 </body>

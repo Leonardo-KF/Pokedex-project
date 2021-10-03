@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <title>Pokedex</title>
 </head>
 <body>
     <header>
         <section class="hbox">
             <section class="cbox1">
-                <img src="/img/pokebola.png" height="50" width="50" alt="pokebola" >
+                <img src="/img/pokebola.png" height="65" width="65" alt="pokebola" >
             </section>
             <section class="Titulo">
                 <a href="/">
@@ -19,7 +22,9 @@
                 </a>
             </section>
             <section class="cadastro">
-                <a href="/cadastro"><h2>Cadastrar</h2></a>
+                <div id="linkcad">
+                    <a href="/cadastro"><h2>Cadastrar</h2></a>
+                </div>
             </section>
         </section>
     </header>
@@ -28,19 +33,16 @@
             <p><%= mensagem %></p> <span id="close">&times;</span>
         </section>
     <% }  %>
-    <div class="container"></div>
-        <ul id="conteudo">
+    <div class="container">
             <% pokedex.forEach(item => { %>
                 <section class="child">
                     <a href="/detalhes/<%= pokedex.indexOf(item) %>">
-                    <img src="<%= item.Imagem %>" alt="imagem do Pokemon">
-                    <li><%= item.Nome %></li>
-                    <li><%= item.Tipo %></li>
+                    <img src="<%= item.Imagem %>" height="150" width="150" alt="imagem do Pokemon">
+                    <h3><%= item.Nome %></h3>
+                    <h4><%= item.Tipo %></h4>
                     </a>
                 </section>
             <% }) %> 
-            
-        </ul>
     </div>
     <script src="script.js"></script>
 </body>

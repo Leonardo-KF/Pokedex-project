@@ -3,15 +3,26 @@ header {
   background-color: rgb(143, 143, 143);
   border-radius: 0px 0px 10px 10px;
 }
-
+a:link {
+  text-decoration: none;
+}
 body {
+  font-family: "Anton", sans-serif;
   margin: 0px;
+}
+h3 {
+  color: black;
+  font-size: 23px;
+}
+h4 {
+  color: black;
+  font-size: 23px;
 }
 .hbox {
   flex-wrap: wrap;
   flex-direction: row;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .cbox1 {
   display: flex;
@@ -19,24 +30,58 @@ body {
   order: 0;
   width: 8%;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 .Titulo {
+  display: flex;
   flex-grow: 1;
   order: 1;
   width: 10%;
 }
 h1 {
-  font-size: 35px;
+  font-size: 40px;
+  color: rgb(255, 211, 14);
 }
 h2 {
-  font-size: 35px;
+  font-size: 30px;
+  color: grey;
 }
 .cadastro {
+  display: flex;
   flex-grow: 0;
   order: 2;
   width: 20%;
-  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+#linkcad {
+  display: flex;
+  width: 50%;
+  border: 5px solid rgb(255, 123, 0);
+  border-radius: 20px;
+  background-color: rgb(255, 211, 14);
+  justify-content: center;
+}
+#linkcad:hover {
+  background-color: darkgoldenrod;
+}
+.container {
+  margin-top: 20px;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.child {
+  display: flex;
+  width: 18%;
+  justify-content: center;
   align-items: baseline;
-  justify-content: flex-end;
+  border: 5px solid rgb(255, 123, 0);
+  border-radius: 25px;
+  text-align: center;
+}
+.child:hover {
+  background-color: rgb(255, 229, 112);
 }
