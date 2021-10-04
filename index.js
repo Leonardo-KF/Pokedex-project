@@ -2,9 +2,10 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const port = process.env.PORT || 3000;
-
+let numero = 2;
 let Pokemons = [
   {
+    numero: 0,
     Nome: "Charmander",
     Tipo: "Fogo",
     Imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
@@ -16,6 +17,7 @@ let Pokemons = [
     Habilidade: "Chama",
   },
   {
+    numero: 1,
     Nome: "Bulbasaur",
     Tipo: "Grama",
     Imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
@@ -27,6 +29,7 @@ let Pokemons = [
     Habilidade: "Crescimento Exagerado",
   },
   {
+    numero: 2,
     Nome: "Squirtle",
     Tipo: "Agua",
     Imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
@@ -66,7 +69,9 @@ app.get("/detalhes/:ind", (req, res) => {
 app.post("/formulario", (req, res) => {
   const { Nome, Tipo, Imagem, Descricao, Altura, Peso, Categoria, Habilidade } =
     req.body;
+  numero++;
   Pokemons.push({
+    numero,
     Nome,
     Tipo,
     Imagem,
